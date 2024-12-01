@@ -1,0 +1,25 @@
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+  <h1 style="color: #2C3E50;">Welcome to UpCard!</h1>
+  
+  <p>Hello <%= @user.first_name %>,</p>
+  
+  <p>Welcome to UpCard, your new platform for creating beautiful digital invitations!</p>
+  
+  <p>With UpCard, you can:</p>
+  <ul>
+    <li>Create stunning digital invitations</li>
+    <li>Choose from various cultural and modern templates</li>
+    <li>Track your guests' responses in real-time</li>
+    <li>Help save the environment by going paperless</li>
+  </ul>
+  
+  <p>To get started, simply <%= link_to 'log in to your account', @login_url, style: 'color: #3498DB;' %>.</p>
+  
+  <p>If you have any questions, feel free to reply to this email.</p>
+  
+  <p>Best regards,<br>The UpCard Team</p>
+  
+  <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #BDC3C7; font-size: 12px; color: #7F8C8D;">
+    <p>This email was sent to <%= @user.email %>. If you didn't create an UpCard account, please ignore this email.</p>
+  </div>
+</div>

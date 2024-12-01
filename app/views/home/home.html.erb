@@ -1,0 +1,23 @@
+<% if user_signed_in? %>
+  <%= render 'dashboard' %>
+<% else %>
+  <div class="min-h-screen bg-white">
+    <!-- Navbar -->
+    <%= render 'shared/navbar' %>
+
+    <!-- Hero Section -->
+    <%= render 'pages/hero' %>
+
+    <!-- Features Section -->
+    <%= render 'pages/features' %>
+
+    <!-- Steps Section -->
+    <%= render 'pages/steps' %>
+
+    <!-- Call to Action Section -->
+    <%= render 'pages/cta' %>
+
+    <!-- Footer -->
+    <%= render 'shared/footer' %>
+  </div>
+<% end %>

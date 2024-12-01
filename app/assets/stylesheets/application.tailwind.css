@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-200;
+  }
+}
+
+*/
+
+.navbar {
+  height: 2rem; /* Hauteur de 32px */
+  line-height: 2rem; /* Alignement vertical */
+}
+.navbar a {
+  padding: 0.2rem 0.5rem; /* Réduction des paddings */
+}
