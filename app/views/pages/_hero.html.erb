@@ -1,0 +1,14 @@
+<div class="container mx-auto px-4 py-16 text-center">
+  <div class="flex items-center justify-center gap-4 mb-12">
+    <h1 class="text-4xl font-bold mr-8 text-right">Créez vos invitations<br>numériques, à votre image.</h1>
+    <%= image_tag "logo UPcard.png", style: "height: 23rem; width: auto;", alt: "UPcard Logo" %>
+  </div>
+
+  <p class="text-gray-600 max-w-3xl mx-auto mb-8">
+    UPcard, la solution intuitive pour des invitations numériques instantanées, fini les coûts élevés (graphistes, impression, frais postaux), fini les délais de production et de temps de réponse, juste en quelques clics... et un bonus écologique en plus.
+  </p>
+  <div class="space-x-4">
+    <%= link_to "Créer mon invitation", new_user_registration_path, class: "px-6 py-2 bg-emerald-600 text-white rounded-md hover:bg-emerald-700 transition-colors duration-200" %>
+    <%= link_to "Découvrir les modèles", "#", class: "px-6 py-2 border border-emerald-600 text-emerald-600 rounded-md hover:bg-emerald-700 hover:text-white transition-colors duration-200" %>
+  </div>
+</div>

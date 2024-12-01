@@ -44,9 +44,44 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# Authentication
+gem "devise"
+
+# File upload and storage
+gem "cloudinary"
+gem "activestorage", require: "active_storage"
+
+# API serialization
+gem "jsonapi-serializer"
+
+# Background jobs
+gem "sidekiq"
+
+# Pagination
+gem "kaminari"
+
+# Authorization
+gem "pundit"
+
+# Forms
+gem "simple_form"
+
+# Internationalization
+gem "rails-i18n"
+
+# Frontend
+gem "tailwindcss-rails"
+
+# Image processing
+gem "mini_magick"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "faker"
+  gem "dotenv-rails"
 end
 
 group :development do
@@ -56,8 +91,11 @@ group :development do
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
+  # Speed up commands on slow machines / https://github.com/rails/spring]
   # gem "spring"
+  
+  # Preview email in the browser instead of sending it
+  gem "letter_opener"
 end
 
 group :test do

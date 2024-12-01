@@ -1,0 +1,28 @@
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+  <h1 style="color: #2C3E50;">New Response to <%= @card.title %></h1>
+  
+  <p>Hello <%= @card.user.first_name %>,</p>
+  
+  <div style="margin: 30px 0; padding: 20px; background-color: #F8F9F9; border-radius: 5px;">
+    <p>
+      <strong><%= @guest %></strong> has <%= @invitation.status %> your invitation to <%= @card.title %>.
+    </p>
+    
+    <% if @invitation.response_message.present? %>
+      <div style="margin-top: 20px;">
+        <p><strong>Message:</strong></p>
+        <p style="font-style: italic;"><%= @invitation.response_message %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <% if @invitation.accepted? %>
+    <p>Great news! Don't forget to update your event planning accordingly.</p>
+  <% else %>
+    <p>We're sorry they can't make it. You can always send them another invitation for your next event.</p>
+  <% end %>
+  
+  <p>You can view all responses to your event in your <%= link_to 'UpCard dashboard', cards_url(host: base_url), style: 'color: #3498DB;' %>.</p>
+  
+  <p>Best regards,<br>The UpCard Team</p>
+</div>

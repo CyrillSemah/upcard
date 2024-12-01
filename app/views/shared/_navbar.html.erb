@@ -1,0 +1,19 @@
+<nav class="navbar bg-white fixed w-full z-50 top-0 left-0 border-b border-gray-200">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <%= link_to root_path, class: "flex items-center" do %>
+      <%= image_tag "logo_UPcard.png", class: "h-8 w-auto", alt: "UPcard Logo" %>
+    <% end %>
+    <div class="flex gap-6">
+      <%= link_to "S'inscrire", new_user_registration_path, class: "text-gray-800 hover:text-emerald-600 font-medium" %>
+      <%= link_to "Se connecter", new_user_session_path, class: "bg-emerald-600 text-white px-4 py-2 rounded-md hover:bg-emerald-700" %>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // JavaScript for toggling menu
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menuLinks = document.getElementById('menu-links');
+    menuLinks.classList.toggle('hidden');
+  });
+</script>

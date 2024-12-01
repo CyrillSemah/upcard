@@ -1,0 +1,31 @@
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+  <h1 style="color: #2C3E50; text-align: center;">Reminder: <%= @card.title %></h1>
+  
+  <p>Hello,</p>
+  
+  <p>This is a friendly reminder that we haven't received your response to <%= @user.full_name %>'s invitation to <%= @card.title %>.</p>
+  
+  <div style="margin: 30px 0;">
+    <h3 style="color: #34495E;">Event Details:</h3>
+    <p>
+      <strong>Date:</strong> <%= l @card.event_date, format: :long %><br>
+      <% if @card.event_time.present? %>
+        <strong>Time:</strong> <%= l @card.event_time, format: :short %><br>
+      <% end %>
+      <% if @card.location.present? %>
+        <strong>Location:</strong> <%= @card.location %>
+      <% end %>
+    </p>
+  </div>
+
+  <div style="text-align: center; margin: 40px 0;">
+    <%= link_to 'Respond to Invitation', @invitation_url, 
+        style: 'background-color: #3498DB; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px;' %>
+  </div>
+  
+  <p>We look forward to hearing from you!</p>
+  
+  <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #BDC3C7; font-size: 12px; color: #7F8C8D;">
+    <p>This reminder was sent to <%= @invitation.email %>. If you've already responded, please disregard this email.</p>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+en:
+  mailers:
+    user:
+      welcome:
+        subject: "Welcome to UpCard!"
+      password_changed:
+        subject: "Your UpCard password has been changed"
+    invitation:
+      invite:
+        subject: "%{host} invites you to %{event}"
+      reminder:
+        subject: "Reminder: Please respond to %{event}"
+      response:
+        subject: "%{guest} has %{status} your invitation"
